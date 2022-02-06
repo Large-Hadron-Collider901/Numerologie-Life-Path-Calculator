@@ -31,11 +31,13 @@ const Profiles = () => {
 
   return (
     <>
-      <h1 style={{ color: "#fff" }}>Profiles</h1>
+    <div className="Profiles">
+      <h1>Profiles</h1>
       <div className="profiles-grid">
         {profiles.map((profile, idx) => (
           <Profile key={idx} profile={profile} />
         ))}
+      </div>
       </div>
     </>
   );

@@ -2,25 +2,38 @@ import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import { Link } from "react-router-dom";
-import AuthButton from "./AuthButton";
+import AuthNav from "./AuthNav";
 
-const Header = () => {
+const AuthHeader = () => {
   return (
     <>
-      <div id="navbar z-30">
-        <Navbar fluid-id="navbar" className="bg-purple-400 z-30">
+      <div id="header-img">
+        <Navbar id="navbar" variant="dark" className="text-black">
           <Navbar.Brand>
+            &nbsp;
          
-            <Link to="/" className="absolute top-4 left-5 h-2/3 no-underline text-white z-30">
-              <h1 className="font-Cinzel text-6xl z-30">Discover Numerology</h1>
+            &nbsp;
+            <Link to="/">
+              Numerology
             </Link>
           </Navbar.Brand>
-          <Nav className="box-content lg:h-14 lg:p-8 z-30">
-          
-            <Nav.Item className="z-30"> <h5 className=" z-30 text-white absolute top-4 right-0 w-96 mr-2">Already have an account?</h5> </Nav.Item>
-            <Nav.Item className="z-30 absolute top-2 right-20">
-             <AuthButton className="z-30 absolute top-1 left-60"/>
+          <Nav>
+            <Nav.Item>
+              <Link to="/Profiles" className="nav-link text-black">
+                Profiles
+              </Link>
             </Nav.Item>
+            <Nav.Item>
+              <Link to="/LifePaths" className="nav-link text-black">
+                Life Paths
+              </Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Link to="/CreateProfile" className="nav-link text-black">
+               Add A Profile
+              </Link>
+            </Nav.Item>
+            <AuthNav />
           </Nav>
         </Navbar>
       </div>
@@ -28,4 +41,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default AuthHeader;

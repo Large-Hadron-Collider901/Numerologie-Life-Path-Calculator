@@ -1,6 +1,5 @@
-import "./UserProfile.css";
+
 import { useAuth0 } from "@auth0/auth0-react";
-import axios from "axios";
 import { useState } from "react";
 import OtherProfile from "./OtherProfile";
 import Button from "react-bootstrap/Button";

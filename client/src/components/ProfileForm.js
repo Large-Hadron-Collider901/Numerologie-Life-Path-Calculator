@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useAuth0 } from "@auth0/auth0-react";
-import { Form, FormGroup, Label, Input, Button } from "reactstrap";
+import { Form, FormGroup, Label, Input, FormText, Button } from "reactstrap";
 import axios from "axios";
 
 const ProfileForm = () => {

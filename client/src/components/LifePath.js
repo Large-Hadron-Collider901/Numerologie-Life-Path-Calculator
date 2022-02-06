@@ -10,10 +10,11 @@ const LifePath = (props) => {
         backgroundColor: "white",
         borderRadius: "10px",
       }}
+      className="bg-black text-white opacity-2/3"
     >
-      <h1>{pathNumber}</h1>
-      <h2>{title}</h2>
-      <p>{description}</p>
+      <h1 className="bg-black text-white">{pathNumber}</h1>
+      <h2 className=" bg-black text-white">{title}</h2>
+      <p className="bg-black text-white">{description}</p>
     </div>
   );
 };
