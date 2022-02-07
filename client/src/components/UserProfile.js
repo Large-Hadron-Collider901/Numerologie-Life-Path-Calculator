@@ -31,14 +31,9 @@ const UserProfile = ({
     <>
       <div className="user-profile-container">
         <div className="profile-container">
-          <h1 style={{ color: "#fff" }}>Your Profile</h1>
+          <h1 className="absolute top-20 mt-2 right-96">Your Profile</h1>
           <div
-            style={{
-              backgroundColor: "white",
-              padding: "1em 0.5em",
-              margin: "2em 15em",
-              borderRadius: "10px",
-            }}
+           className="absolute right-64 mr-10 top-40"
           >
             <h2>{userProfile.name}</h2>
             <h3>

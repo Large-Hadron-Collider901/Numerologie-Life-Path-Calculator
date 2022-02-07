@@ -95,6 +95,8 @@ const CreateProfile = () => {
   if (isLoading) return <h1>Loading...</h1>;
 
   return userProfiles.length > 0 ? (
+    <>
+
     <UserProfile
       userProfile={userProfiles[0]}
       otherProfiles={userProfiles.slice(1)}
@@ -108,8 +110,9 @@ const CreateProfile = () => {
       handleUserProfileAdd={handleUserProfileAdd}
       handleUserProfileEdit={handleUserProfileEdit}
     />
-  ) : (
-    <ProfileForm />
+    </>
+  ) : ( <ProfileForm />
+  
   );
 };
 

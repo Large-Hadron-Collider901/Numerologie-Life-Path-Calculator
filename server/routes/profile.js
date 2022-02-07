@@ -24,13 +24,12 @@ router.put("/:id", (req, res) => {
 
 router.delete("/:id", (req, res) => {
   ProfileCollection.findOneAndDelete(
-    { _id: req.params.id },
+    { email: req.query.email, _id: req.params.id },
     (err, results) => {
       err ? res.send(err) : res.send(results);
     }
   );
-});
-
+  });
 
 
 module.exports = router;

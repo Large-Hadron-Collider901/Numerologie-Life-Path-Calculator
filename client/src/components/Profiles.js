@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Profile from "./Profile";
 
-
 const Profiles = () => {
   const [profiles, setProfiles] = useState([]);
   const [error, setError] = useState(undefined);
@@ -31,8 +30,8 @@ const Profiles = () => {
 
   return (
     <>
-    <div className="Profiles">
-      <h1>Profiles</h1>
+    <div className="absolute top-0 right-10">
+      <h1 style={{ color: "#fff" }}>Profiles</h1>
       <div className="profiles-grid">
         {profiles.map((profile, idx) => (
           <Profile key={idx} profile={profile} />

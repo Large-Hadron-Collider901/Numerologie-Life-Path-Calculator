@@ -2,8 +2,8 @@ import React from 'react';
 import AuthButton from './AuthButton';
 
 const AuthNav = () => (
-  <div className="navbar-nav ml-auto">
-    <AuthButton className="ml-96"/>
+  <div>
+    <AuthButton className="ml-96 absolute right-0"/>
   </div>
 );
 

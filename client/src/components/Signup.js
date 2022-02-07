@@ -7,13 +7,13 @@ const Signup = () => {
   return (
     <>
     <Card className="">
-	<CardTitle className=" "><h1 className=" ">Sign up to get your life path number!</h1></CardTitle>
-	<CardBody className=" "><button
+	<CardTitle className=" "><h1 className=" ">Sign up to get your life path number! <button
       className="btn btn-primary btn-block"
       onClick={() => loginWithRedirect()}
     >
       Signup
-    </button></CardBody>
+    </button></h1></CardTitle>
+	<CardBody className=" "></CardBody>
 
     </Card>
     </>

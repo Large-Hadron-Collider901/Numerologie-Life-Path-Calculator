@@ -60,6 +60,7 @@ const OtherProfile = ({
           margin: "2em 4em",
           borderRadius: "10px",
         }}
+        className="float-top "
       >
         <h2>{name}</h2>
         <h4>Date of Birth: {`${birthMonth}/${birthDay}/${birthYear}`}</h4>
