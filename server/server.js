@@ -11,7 +11,7 @@ const numerologyRouter = require("./routes/numerology.js");
 // set up mongodb connection
 const mongoDB = process.env.DB
 
-mongoose.connect("mongodb+srv://smccu726:admin@masterofthesecondveil.j8irh.mongodb.net/react-numerology?retryWrites=true&w=majority", {});
+mongoose.connect(mongoDB, {});
 mongoose.connection.on(
   "error",
   console.error.bind(console, "MongoDB connection error:")

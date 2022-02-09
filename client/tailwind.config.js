@@ -3,6 +3,7 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      gridAutoRows: {'2fr': 'minmax(0, 2fr)'},
       fontFamily: {
         Cinzel: ["Cinzel Decorative", "cursive"],
         Rakkas: ["Rakkas", "cursive"],

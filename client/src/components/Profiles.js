@@ -30,14 +30,16 @@ const Profiles = () => {
 
   return (
     <>
-    <div className="absolute top-0 right-10">
-      <h1 style={{ color: "#fff" }}>Profiles</h1>
-      <div className="profiles-grid">
+    
+    <section className="  ">
+      <h1 className="">Profiles</h1>
+      <div className="">
         {profiles.map((profile, idx) => (
           <Profile key={idx} profile={profile} />
         ))}
       </div>
-      </div>
+      </section>
+    
     </>
   );
 };
