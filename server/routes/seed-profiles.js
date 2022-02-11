@@ -17,8 +17,15 @@ router.post("/", async (_, res) => {
     
   ];
 
-  for await (const profile of profiles) profile.save();
-  res.json({ status: "ok" });
+  for await (const profile of profiles) profile.save()
+ .then(() => res.json({ 
+   status: "ok" ,
+  message: "Created Profile Successfully"
+})) 
+.catch(err => res.status(400).json({
+  "error": err,
+  "message": "Error creating account"
+}))
   // profiles.forEach(profile => await profile.save());
 
   // await profileModel.create(profiles, (err, results) => {

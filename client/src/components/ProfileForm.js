@@ -16,7 +16,7 @@ const ProfileForm = () => {
 
   const handleFormSubmit = async () => {
     try {
-      await axios.post("http://localhost:3001/profiles", {
+      await axios.post("http://localhost:5000/profiles", {
         name: currentName,
         birthMonth: Number(currentBirthMonth),
         birthDay: Number(currentBirthDay),

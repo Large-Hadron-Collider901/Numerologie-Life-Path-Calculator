@@ -26,8 +26,8 @@ const CreateProfile = () => {
 
   const handleUserProfileEdit = async (updatedProfile,id) => {
     try {
-      await axios.put(`http://localhost:3001/profile/${id}`, updatedProfile);
-      const { data } = await axios.get("http://localhost:3001/profiles/user", {
+      await axios.put(`http://localhost:5000/profile/${id}`, updatedProfile);
+      const { data } = await axios.get("http://localhost:5000/profiles/user", {
         params: { email },
       });
       setUserProfiles(data);
@@ -40,7 +40,7 @@ const CreateProfile = () => {
 
   const handleUserProfileAdd = async (newProfile, email) => {
     try {
-      await axios.post("http://localhost:3001/profiles", {
+      await axios.post("http://localhost:5000/profiles", {
         name: newProfile.name,
         birthMonth: Number(newProfile.birthMonth),
         birthDay: Number(newProfile.birthDay),
@@ -48,7 +48,7 @@ const CreateProfile = () => {
         gender: newProfile.gender,
         email,
       });
-      const { data } = await axios.get("http://localhost:3001/profiles/user", {
+      const { data } = await axios.get("http://localhost:5000/profiles/user", {
         params: { email },
       });
       setUserProfiles(data);
@@ -59,13 +59,13 @@ const CreateProfile = () => {
   };
 
   const handleProfileDelete = async (userEmail, profileId) => {
-    await axios.delete(`http://localhost:3001/profile/${profileId}`, {
+    await axios.delete(`http://localhost:5000/profile/${profileId}`, {
       params: {
         email: userEmail,
       },
     });
 
-    const { data } = await axios.get("http://localhost:3001/profiles/user", {
+    const { data } = await axios.get("http://localhost:5000/profiles/user", {
       params: { email },
     });
     setUserProfiles(data);
@@ -75,7 +75,7 @@ const CreateProfile = () => {
     const fetchUserProfiles = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:3001/profiles/user",
+          "http://localhost:5000/profiles/user",
           {
             params: { email },
           }
@@ -90,7 +90,7 @@ const CreateProfile = () => {
       }
     };
     fetchUserProfiles();
-  }, [error]);
+  }, [error, email]);
 
   if (isLoading) return <h1>Loading...</h1>;
 

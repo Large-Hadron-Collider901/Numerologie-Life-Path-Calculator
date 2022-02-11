@@ -11,18 +11,22 @@ const numerologyRouter = require("./routes/numerology.js");
 // set up mongodb connection
 const mongoDB = process.env.DB
 
-mongoose.connect(mongoDB, {});
-mongoose.connection.on(
-  "error",
-  console.error.bind(console, "MongoDB connection error:")
-);
-
+mongoose
+  .connect(
+mongoDB,
+    {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    }
+  )
+  .then(() => console.log("MongoDB has been connected"))
+  .catch((err) => console.log(err));
 // set up express server
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 
 app.get("/", (_, res) => {
   res.send("Hello world");

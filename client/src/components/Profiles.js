@@ -9,7 +9,7 @@ const Profiles = () => {
   useEffect(() => {
     const fetchProfiles = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3001/profiles");
+        const { data } = await axios.get("http://localhost:5000/profiles");
         setProfiles(data);
         error && setError(undefined);
       } catch (err) {

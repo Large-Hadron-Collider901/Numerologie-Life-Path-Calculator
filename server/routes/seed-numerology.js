@@ -78,8 +78,16 @@ router.post("/", async (_, res) => {
     }),
   ];
 
-  for await (const index of lifePaths) index.save();
-  res.json({ status: "ok" });
+  for await (const index of lifePaths) index.save()
+  .then(() => res.json({ 
+    status: "ok" ,
+   
+ })) 
+ .catch(err => res.status(400).json({
+   "error": err,
+   "message": "Error saving lifepaths"
+ }))
+
  
 });
 

@@ -11,7 +11,7 @@ const LifePaths = () => {
   useEffect(() => {
     const fetchLifePaths = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3001/numerology");
+        const { data } = await axios.get("http://localhost:5000/numerology");
         setLifePaths(data);
         error && setError(undefined);
       } catch (err) {

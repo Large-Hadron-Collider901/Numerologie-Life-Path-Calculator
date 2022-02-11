@@ -4,13 +4,13 @@ import { Card, CardBody, CardTitle } from 'reactstrap';
 const AboutNumerology = () => {
 
 return (
-    <>
-<img src="https://i.ibb.co/kJ4Drst/pexels-pixabay-301673.jpg" width="60%" height="100%"alt="pexels-pixabay-301673" border="0" className="object-cover absolute right-0 dark:bg-coolGray-500 z-0"/>   
-      <img src="https://i.ibb.co/4tfhN62/shutterstock-1787658104.jpg" height="100%" width="50%" alt="shutterstock-1787658104" border="0" className="h-full dark:bg-coolGray-500 pr-40 z-20"/>
+    <div className="h-100%">
+<img src="https://i.ibb.co/kJ4Drst/pexels-pixabay-301673.jpg" width="60%" alt="pexels-pixabay-301673" border="0" className="object-cover absolute right-0 dark:bg-coolGray-500 z-0"/>   
+      <img src="https://i.ibb.co/4tfhN62/shutterstock-1787658104.jpg"  width="50%" alt="shutterstock-1787658104" border="0" className="height-full dark:bg-coolGray-500 pr-40 z-20"/>
           <div className="absolute top-40 mr-40 right-96 border-8 border-purple-700 w-96 z-30">
 		<Card className="float-right z-30">
 	<CardTitle className="h-62 bg-green-200"><h1 className="ml-2 w-90%">What Is Numerology?</h1></CardTitle>
-	<CardBody className="h-64 w-90%  pb-16 overflow-scroll">
+	<CardBody className="h-64 w-90%  overflow-scroll">
 
         
         <p>Numerology can loosely be described as the sister study to Astrology. Much like astrology, Numerology is a form of divination.</p>
@@ -30,9 +30,7 @@ return (
 		<Card className="float-right z-30">
 	<CardTitle className="h-62 bg-pink-200 z-30"><h1 className="ml-2 w-90% z-30">What Is Life Path Number?</h1></CardTitle>
 	<CardBody className="h-64 w-90%  pb-16 overflow-scroll z-30" >
-        <p>Many of you may be familiar with Astrology, and it is likely that you may even know your "Sun Sign" (Taurus, Gemini, Scorpio, etc), as well. Numerology can loosely be described as the sister study of Astrology, as it is quite similar in many ways.</p>
-        
-        <p> For example, just as you have your sun sign in Astrology, you have a 'Life Path Number' in Numerology. Also, just like you have a birth chart in Astrology (sun sign, moon sign, rising sign) which is calculated from your date of birth, similarly, you have a numerology chart which holds not only your life path number, but also your destiny number, personality number, challenge pinnacles, and more. </p>
+        <p>In regards to Astrology, many of you may be familiar with your "Sun Sign" (Taurus, Gemini, Scorpio, etc). just as you have your sun sign in Astrology, you have a 'Life Path Number' in Numerology. Also, just like you have a birth chart in Astrology (sun sign, moon sign, rising sign) which is calculated from your date of birth, similarly, you have a numerology chart which holds not on</p>
 
         <p> But what's it all about anyway? When you lookup "Numerology" on the internet, there is an almost overwhelming abundance of information surrounding Numerology and what it really means. Although there are a number of popular Numerology systems which originate from different cultures around the world that each have their own unique ciphers, charts, and interpretations, the underlying theme behind the practice remains more or less the same.</p>
         
@@ -42,7 +40,7 @@ return (
 	</CardBody>
 	</Card>
         </div>
-        </>
+        </div>
 
 )
 }
